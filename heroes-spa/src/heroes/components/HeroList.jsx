@@ -2,10 +2,10 @@ import { HeroCard } from './'
 import { getHeroesByPublisher } from '../helpers/'
 
 export const HeroList = ( publisher ) => {
-  console.log(publisher)
+
 
   const heroes = getHeroesByPublisher( publisher ); 
-  console.log(heroes)
+  
 
   
   return (

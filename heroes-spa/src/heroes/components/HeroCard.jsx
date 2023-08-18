@@ -1,8 +1,18 @@
 
-/* import heroes from '../data/heroes' */
+import { Link } from 'react-router-dom';
 
+//componente que se usa aqui: 
 
-//como quiero recibir las properties debo ponerlas entre llaves
+const CharactersByHero = ({ alter_ego, characters }) => {
+  return (
+     (alter_ego === characters)
+     ? <> </>
+     : <p className="card-text">{characters}</p>
+  )
+  
+}
+
+  //como quiero recibir las properties debo ponerlas entre llaves
  export const HeroCard = ({  
   id,
   superhero,
@@ -13,7 +23,11 @@
 }) => {
 
 const heroImageUrl = `./assets/heroes/${id}.jpg`
-  console.log(heroImageUrl) 
+
+
+
+
+
 return (
 
   <div className="col">
@@ -27,7 +41,16 @@ return (
     <div className="col-8">
     <div className="card-body">
       <h5 className="card-title">{superhero}</h5>
-      <p className="card-text">{alter_ego}</p>
+      <p className="card-text">{alter_ego}</p>  
+          <CharactersByHero alter_ego={alter_ego} characters={characters} />
+      <p className="card-text">
+        <small className="text-muted">{first_appearance}</small>
+      </p>
+
+      <Link to={`/hero/${ id }`}>
+      Mas ...
+      </Link>
+
 
       <p>{characters }</p>
     </div>
