@@ -1,9 +1,5 @@
 import { types } from "../types/types";
 
-/* const initialState = {
-  logged: false,
-}; */
-
 export const authReducer = (state = {}, action) => {
   
       switch (action.type) {
@@ -16,8 +12,7 @@ export const authReducer = (state = {}, action) => {
   
           case types.logout:
               return {
-                  logged: false,
-                  
+                  logged: false,                  
               }
   
           default:
