@@ -8,7 +8,7 @@ export const HeroPage = () => {
   const {id} = useParams()
   const navigate = useNavigate()
 
-  const hero = useMemo(() => getHeroById( id ), [ id ]);
+  const hero = useMemo(() => getHeroById({ id }), [ id ]);
 
   const onNavigateBack = () => {
     navigate(-1);
@@ -36,7 +36,7 @@ export const HeroPage = () => {
       <h5>Characters</h5>
       <p>{hero.characters}</p>
       <button
-      className="btn btn-outline-primary"
+      className="btn btn-outline-primary btn-sm animate__animated animate__fadeInUp"
       onClick={onNavigateBack }
       >
         Return
