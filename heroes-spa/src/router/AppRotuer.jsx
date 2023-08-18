@@ -7,8 +7,7 @@ export const AppRotuer = () => {
     <>  
 
     <Routes>
-    <Route path="login" element={<LoginPage />} />    
-    
+    <Route path="login" element={<LoginPage />} />        
         <Route path="/*" element={<HeroesRoutes />} />
 
     </Routes>
